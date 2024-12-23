@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!--קישור לדף העיצוב-->
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="icon" type="icon" href="../images/2לוגו_פיצה-removebg-preview.png">
+</head>
+
+<body>
+        <div class="orderr">
+                <!-- סרגל ניווט לכל האתר -->
+                <div class="navbar"> <!--  עוזר לארגון וסדר הדף בשביל יצרית סרגל ניווט-->
+
+
+                        <label class="menu-toggle" for="menu-checkbox">&#9776;</label>
+                        <input type="checkbox" id="menu-checkbox" />
+
+
+                        <ul> <!--מכיל רשימה- -->
+
+
+                                <li> <a href="../pages/index.html"> <img src="../images/2לוגו_פיצה-removebg-preview.png"
+                                                        alt=""> </a></li>
+
+
+                                <!-- il= כל פריט ברשימה -->
+                                <li><a href="../pages/index.html">דף הבית</a>
+                                <li>
+                                        <span>|</span>
+                                <li><a href="../pages/menu.html">התפריט שלנו</a>
+                                <li>
+                                        <span>|</span>
+                                <li> <a href="../pages/products.html">הזמנות</a>
+                                <li>
+                                        <span>|</span>
+                                <li><a href="../pages/contact.html">צור קשר</a>
+                                <li>
+                        </ul>
+                </div>
+
+                <!-- פרטי הזמנה -->
+                <!-- הדף הבא שאליו ישלח הטופס הנוכחי -->
+                <div id="backgrounPizza">
+                        <!-- style="flex:75vh;"> ////-->
+                        <form action="../pages/order2.html" style="margin-left: 25vw;"> <!--תגית עבור קלטים מהמשתמש-->
+
+                                <div class="order" style="align-content: center;">
+
+                                        <div class="nameO">
+                                                <div class="order1">
+                                                        <!-- !בקשה מהמשתמש להכניס שם פרטי + שימוש בשדה חובה -->
+                                                        <label for="userName">שם פרטי:</label>
+                                                        <input type="text" name="username" required
+                                                                placeholder="שם פרטי" />
+                                                </div>
+                                                <!-- !בקשה מהמשתמש להכניס כתובת + שימוש בשדה חובה -->
+                                                <div class="order1">
+                                                        <label for="userAdress">כתובת:</label>
+                                                        <input type="text" name="userAdress" required
+                                                                placeholder="כתובת" />
+                                                </div>
+                                                <!-- !בקשה מהמשתמש להכניס טלפון + שימוש בשדה חובה -->
+                                                <label for="phone">טלפון:</label>
+                                                <input type="tel" id="phone" name="phone" required
+                                                        placeholder="טלפון" />
+                                        </div>
+
+                                        <div class="tosafot">
+                                                <p> <!--בחירת תוספות-->
+                                                <p>מה יפנק לכם את הפיצה? בחרו תוספות! </p>
+                                                <input type="checkbox" name="onion">בצל <br>
+                                                <input type="checkbox" name="olives">זיתים <br>
+                                                <input type="checkbox" name="mushrooms">פטריות <br>
+                                                <input type="checkbox" name="corn">תירס <br>
+                                                <input type="checkbox" name="tomatoes">עגבניות
+                                                </p>
+                                        </div>
+
+                                        <p>בחרו את השיטה המועדפת עליכם לקבלת ההזמנה:</p>
+                                        <p>
+                                                <input type="radio" name="sending" />משלוח
+                                                <input type="radio" name="sending" />איסוף עצמי
+                                        </p>
+
+                                        <p> <!-- תגית לשליחת טופס ואיפוסו-->
+                                                <input type="submit" name="send" value="שלח">
+                                                <input type="reset" name="reset" value="איפוס">
+                                        </p>
+                                </div>
+                </div>
+                </form>
+
+                <footer> <!-- כותרת תחתונה של תחתי העמוד -->
+                        <p>כל הזכויות שמורות לנעה הורביץ
+                                <br>
+                                <a href="../pages/about.html">קצת עלינו</a>
+                        </p>
+
+                </footer>
+
+        </div>
+</body>
+
+</html>

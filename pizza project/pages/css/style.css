@@ -1,0 +1,393 @@
+/*עיצוב לכל העמוד*/
+* {
+    box-sizing: border-box;
+    /*margin וה pading-שומר על הרוחב והאורך שיהיה שווה מפיני ה*/
+    background-size: 100%;
+    align-content: center;
+    /*מעביר את כל הכיתובים לאמצע*/
+    direction: rtl;
+    /*מסדר את האתר מאנגלית לעברית מעביר משמאל לימין*/
+
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* עיצוב הסרגל ניווט */
+.navbar {
+    /*עיצוב של כל הסרגל כולו (מה שקורה מסביבו)*/
+    background-color: rgb(167, 8, 8);
+    /*צבע מסגרת מסביב לסרגל ניווט*/
+    top: 0%;
+    /*צמוד ללמעלה*/
+    position: sticky;
+    /*מצמיד ללמעלה תמיד*/
+    text-align: center;
+    /*ממרכז את הסרגל ניווט*/
+    padding: 20px;
+    /*גודל המרחק הפנימי מהמסגרת שמסביב לסרגל*/
+
+
+}
+
+.navbar ul {
+    /*מיקום כל פריט*/
+    list-style-type: none;
+    ;
+    /* מסיר תבליטים */
+    padding: 0;
+    margin: 0;
+    /* מוסיף מרווחים בין פריטי הניווט */
+    display: flex;
+    /* הופך פריטים לשורה אחת*/
+    justify-content: center;
+    /*ממרבז כל  םריט לאמצע*/
+    flex-wrap: wrap;
+    /*ריספונסיבי שיגלוש לאורך ומוריד שורה*/
+}
+
+.navbar li {
+    padding: 10px;
+    /*דואג למרחק בין המילים שבסרגל*/
+    color: #ffffff;
+}
+
+.navbar a {
+    display: inline-block;
+    /**/
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    /*ממרבז כל  םריט לצד ימין*/
+    color: rgb(255, 255, 255);
+    /*צבע טקסט שחור*/
+    text-decoration: none;
+    /*מסיר קו תחתון*/
+    font-size: 25px;
+    /*גודל פונט*/
+    padding: 10px, 15px;
+    /* מוסיף רווח פנימי לקישורים */
+    font-weight: bold;
+    /*כתב מודגש*/
+
+}
+
+.navbar a:hover {
+    /*משנה כיתוב כאשר שמים את העכבר*/
+    font-size: 30px;
+    /*מגדיל כתב*/
+    color: rgb(7, 6, 6);
+    /*מחליף צבע*/
+
+}
+
+.navbar img {
+    /*עיצוב תמונת לוגו*/
+    height: 50px;
+    width: 45px;
+}
+
+/* הוספת כפתור התפריט למובייל */
+.navbar .menu-toggle {
+    display: none;
+    /* כפתור זה יוסתר על מסכים גדולים */
+    font-size: 30px;
+    cursor: pointer;
+    /*עושה את הפסים בריספונסיבי*/
+    color: #000000;
+}
+
+/* כפתור להחזרת התפריט */
+.navbar input[type="checkbox"] {
+    display: none;
+}
+
+/* ברגע שהמסך קטן מ-768px, נציג את כפתור התפריט */
+@media (max-width: 768px) {
+
+    /* הסתרת התפריט בהתחלה */
+    .navbar ul {
+        display: none;
+        /* התפריט מוסתר */
+        flex-direction: column;
+        /* הופך את התפריט לעמודה */
+        align-items: center;
+        /* ממרכז את הפריטים */
+    }
+
+    /* הצגת התפריט כאשר checkbox נבחר */
+    .navbar input[type="checkbox"]:checked~ul {
+        display: block;
+        /* התפריט מוצג כאשר הכפתור נלחץ */
+    }
+
+    /* הצגת כפתור התפריט */
+    .navbar .menu-toggle {
+        display: block;
+    }
+}
+
+video {
+    width: 100%;
+    /* כל רוחב הדף */
+    max-width: 100%;
+    /*גודל הסרטון*/
+    margin-top: 0%;
+    /*המרחק ממה שנמצא מעליו*/
+}
+
+footer {
+    background-color: rgb(167, 8, 8);
+    ;
+    /*צבע מסגרת מסביב לסרגל ניווט*/
+    top: 0;
+    bottom: 0%;
+    /*צמוד ללמעלה*/
+    position: sticky;
+    /*מצמיד ללמעלה תמיד*/
+    text-align: center;
+    /*ממרכז את הסרגל ניווט*/
+    padding: 10px;
+    /*גודל המרחק הפנימי מהמסגרת שמסביב לסרגל*/
+    margin: 0;
+
+}
+
+footer a {
+    color: black;
+
+}
+
+footer a:hover {
+    /*עיצוב קישור לדף אודות*/
+    /* transform: scale(1.5s,1.5);
+    font-size: 30px;מגדיל כתב */
+    color: rgb(0, 0, 0);
+    /*מחליף צבע*/
+}
+
+
+/*דף פיצות*/
+.nameO label {
+    display: block;
+    margin-bottom: 2px;
+    /* רווח בין התווית לשדה */
+
+}
+
+
+#backgroundpizza {
+    background-image: url('background.jpg');
+    /* תמונת הרקע */
+    background-size: cover;
+    /* מכסה את כל האלמנט */
+    background-position: center;
+    /* ממקם את התמונה במרכז */
+    position: absolute;
+    /* ממקם את האלמנט בשכבה */
+    top: 0;
+    /* מיקום תחילת המסך */
+    left: 0;
+    width: 100%;
+    /* מתאים לגודל המסך */
+    height: 100%;
+    z-index: 1;
+    /* שכבה תחתונה */
+}
+
+#backgrounPizza {
+    flex: 75%;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/רקע\ להזמנה\ פיצות.webp);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    /* משנה את גודל התמונה כדי לכסות את כל הרקע */
+}
+
+.orderr {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.order1 {
+    margin: 0;
+    pading: 0;
+}
+
+.order {
+    /*עיצוב של פרטי לקוח שמזמין*/
+
+    border: 1px solid #000; /* גבול בעובי 5 פיקסלים ובצבע שחור */
+    border-radius: 10px; /* פינות מעוגלות */
+    padding: 10px; /* רווח פנימי בין התוכן לגבול */
+    margin: 15vh 32vw; /*מרכז את המסגרת אופקית כדי שלא יהיה צמוד לכותרת*/
+    max-width: 450px; /* מגביל את הרוחב המקסימלי כדי שהמסגרת לא תיהיה על כל רוחב הדף*/
+    background-color: #f7eaea; /* צבע רקע עדין */
+    text-align: center; /* טקסט ממורכז */
+    width:50vw;
+
+ 
+}
+
+/*דף קטגוריה*/
+.kategorya {
+    background-color: rgb(248, 235, 229);
+}
+
+.kategorya1 {
+    margin: 15px;
+    padding: 0;
+}
+
+.kategoryacolumn {
+    float: left;
+    /*מצמיד את התמונות לצד שמאל ועושה וצן לרוחב*/
+    width: 33.33%;
+    padding: 5px;
+}
+
+.kategoryaword {
+    text-align: center;
+    color: #000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 90%;
+}
+
+/*דפ פיצה*/
+.pizza {
+    background-color: rgb(248, 235, 229);
+}
+
+.pizza1 {
+    margin: 15px;
+    padding: 0;
+}
+
+.pizzacolumn {
+    float: left;
+    /*מצמיד את התמונות לצד שמאל ועושה וצן לרוחב*/
+    width: 33.33%;
+    padding: 5px;
+}
+
+.pizzapictur {
+    /* border:1px solid rgb(0, 0, 0); */
+    /* transform: scale(1.5,1.5); */
+}
+
+.pizzaword {
+    text-align: center;
+    color: #000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 90%;
+}
+
+/*דף שתייה*/
+.drink {
+    background-color: rgb(248, 235, 229);
+}
+
+.drink1 {
+    margin: 15px;
+    padding: 0;
+}
+
+.drinkcolumn {
+    float: left;
+    /*מצמיד את התמונות לצד שמאל ועושה וצן לרוחב*/
+    width: 25%;
+    padding: 5px;
+}
+
+.drinkword {
+    text-align: center;
+    color: #000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 90%;
+}
+
+/*דף אודות*/
+.about1 {
+
+    background-image: url(../images/מסגרת\ פיצה\ עץ.webp);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    /* ממקם את התמונה במרכז */
+    background-attachment: fixed;
+    background-size: cover;
+    /* מוודא שהתמונה מכסה את כל העמוד */
+}
+
+.about {
+    margin: 0;
+    /* מבטל שוליים מיותרים */
+    padding: 3%;
+    text-align: center;
+    font-weight: bold;
+    /*הפיכת כתב לעבה יותר*/
+    border-color: #ffffff;
+    font-size: 25px;
+    /*גודל הכתב*/
+    color: rgb(0, 0, 0);
+    /* צבע הטקסט */
+
+    text-shadow:
+        /*מסגרת לסנה לכתב*/
+        -1px -1px 0 rgb(199, 3, 3),
+        /* מסגרת לבנה למעלה ושמאלה */
+        1px -1px 0 rgb(115, 233, 99),
+        /* מסגרת לבנה למעלה וימינה */
+        -1px 1px 0 rgb(199, 3, 3),
+        /* מסגרת לבנה למטה ושמאלה */
+        1px 1px 0 rgb(115, 233, 99);
+    /* מסגרת לבנה למטה וימינה */
+
+}
+
+/*דף אישור הזמנה*/
+#finish_order {
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/מסגרת\ פיצה\ מודרני.webp);
+    background-position: center;
+    /* ממקם את התמונה במרכז */
+    background-attachment: fixed;
+    /* רקע לא זז בזמן גלילית העמוד */
+    background-size: cover;
+    /* מכסה את כל העמוד */
+    min-height: 100vh;
+    /* גובה המינימום יהיה כל המסך */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    /* צבע הטקסט לבן */
+}
+
+#finish_order2 {
+    margin: 0;
+    /* מבטל שוליים מיותרים */
+    padding: 0%;
+    font-weight: bold;
+    /*הפיכת כתב לעבה יותר*/
+    font-size: 170%;
+    /*גודל הכתב*/
+    color: rgb(0, 0, 0);
+    /* צבע הטקסט */
+    font-family: inherit;
+    /*סוג הכתב*/
+    position: fixed;
+    top: 50%;
+    /* מיקום אנכי - אמצע המסך */
+    left: 50%;
+    /* מיקום אופקי - אמצע המסך */
+    transform: translate(-50%, -50%);
+    /* מתקן את המיקום לאמצע המדויק */
+    text-align: center;
+    /* יישור תוכן פנימי למרכז */
+}
